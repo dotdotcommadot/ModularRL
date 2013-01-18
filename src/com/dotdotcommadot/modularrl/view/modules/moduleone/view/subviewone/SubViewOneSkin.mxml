@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	
+	<fx:Metadata>
+		[HostComponent("com.dotdotcommadot.modularrl.view.modules.moduleone.view.subviewone.SubViewOne")]
+	</fx:Metadata>
+	
+	<s:layout>
+		<s:VerticalLayout gap="10"
+						  paddingLeft="10"
+						  paddingRight="10"
+						  paddingTop="10"
+						  paddingBottom="10" />
+	</s:layout>
+	
+	<s:Label text="SUB VIEW ONE"
+			 fontSize="16" />
+	
+	<s:Button label="showPopup()" 
+			  click="hostComponent.loadStuff()" />
+	
+</s:Skin>
