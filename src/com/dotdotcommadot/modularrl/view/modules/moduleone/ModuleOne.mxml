@@ -4,7 +4,8 @@
 		  xmlns:mx="library://ns.adobe.com/flex/mx" 
 		  xmlns:config="com.dotdotcommadot.modularrl.view.modules.moduleone.config.*" 
 		  xmlns:mxml="robotlegs.bender.mxml.*" 
-		  xmlns:mvcs="robotlegs.bender.bundles.mvcs.*" >
+		  xmlns:mvcs="robotlegs.bender.bundles.mvcs.*" 
+		  xmlns:subviewone="com.dotdotcommadot.modularrl.view.modules.moduleone.view.subviewone.*" >
 	
 	<fx:Declarations>
 		<mxml:ContextBuilderTag id="contextTag">
@@ -12,5 +13,9 @@
 			<config:ModuleOneConfig />
 		</mxml:ContextBuilderTag>
 	</fx:Declarations>
+	
+	<subviewone:SubViewOne id="subViewOne"
+						   width="100%"
+						   height="100%" />
 	
 </s:Module>
