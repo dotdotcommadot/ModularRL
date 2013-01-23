@@ -6,7 +6,19 @@
 			   xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
 			   xmlns:config="com.dotdotcommadot.modularrl.config.*"
 			   xmlns:shell="com.dotdotcommadot.modularrl.view.shell.*" 
-			   minWidth="955" minHeight="600"  >
+			   minWidth="955" minHeight="600" 
+			   initialize="onInitialize()">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.core.FlexGlobals;
+			
+			private function onInitialize() : void
+			{
+				contextTag.contextView = FlexGlobals.topLevelApplication.systemManager;
+			}
+		]]>
+	</fx:Script>
 	
 	<fx:Style source="assets/styles/style.css" />
 	
