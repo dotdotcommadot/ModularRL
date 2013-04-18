@@ -4,10 +4,9 @@
 			   xmlns:mx="library://ns.adobe.com/flex/mx" 
 			   xmlns:mxml="robotlegs.bender.mxml.*" 
 			   xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
-			   xmlns:config="com.dotdotcommadot.modularrl.config.*"
-			   xmlns:shell="com.dotdotcommadot.modularrl.view.shell.*" 
-			   minWidth="955" minHeight="600" 
-			   initialize="onInitialize()">
+			   xmlns:config="com.dotdotcommadot.modularrl.shell.config.*"
+			   xmlns:view="com.dotdotcommadot.modularrl.shell.view.*"
+			   initialize="onInitialize()" >
 	
 	<fx:Script>
 		<![CDATA[
@@ -20,17 +19,17 @@
 		]]>
 	</fx:Script>
 	
-	<fx:Style source="assets/styles/style.css" />
+	<fx:Style source="assets/styles/globalstyles.css" />
 	
 	<fx:Declarations>
 		<mxml:ContextBuilderTag id="contextTag">
-			<mvcs:MVCSBundle />
-			<config:AppConfig />
+			<config:ShellBundle />
+			<config:ShellConfig />
 		</mxml:ContextBuilderTag>
 	</fx:Declarations>
 	
-	<shell:Shell id="shell"
-				 width="100%"
-				 height="100%" />
+	<view:Shell id="shell"
+				width="100%"
+				height="100%" />
 	
 </s:Application>

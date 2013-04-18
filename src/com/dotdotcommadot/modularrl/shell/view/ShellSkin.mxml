@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Metadata>
+		[HostComponent("com.dotdotcommadot.modularrl.shell.view.Shell")]
+	</fx:Metadata>
+	
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="disabled" />
+	</s:states>
+	
+	<s:layout>
+		<s:HorizontalLayout gap="10"
+							paddingLeft="10"
+							paddingRight="10"
+							paddingTop="10"
+							paddingBottom="10" />
+	</s:layout>
+	
+	<s:VGroup gap="5"
+			  width="120">
+		<s:Label text="SHELL"
+				 styleName="h1"/>
+		
+		<s:Spacer height="10" />
+		
+		<s:Button id="loadModuleOneButton" 
+				  label="Load Module One"
+				  width="100%"
+				  click="hostComponent.loadModule( Shell.MODULE_ONE_PATH )" />
+		
+		<s:Button id="loadModuleTwoButton" 
+				  label="Load Module Two"
+				  width="100%"
+				  click="hostComponent.loadModule( Shell.MODULE_TWO_PATH )" />
+		
+		<s:Button id="unloadModule" 
+				  label="Unload Module"
+				  width="100%"
+				  click="hostComponent.unloadModule()" />
+		
+		<s:Spacer height="10" />
+		
+		<s:Label text="Memory: {hostComponent.usedMemory}" />
+	</s:VGroup>
+	
+	<s:ModuleLoader id="moduleLoader"
+					width="100%"
+					height="100%"/>
+	
+</s:Skin>

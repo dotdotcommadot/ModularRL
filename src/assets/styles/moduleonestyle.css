@@ -1,0 +1,9 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace main "com.dotdotcommadot.modularrl.modules.moduleone.view.main.*";
+
+main|ModuleOneMainView
+{
+	skinClass: ClassReference("com.dotdotcommadot.modularrl.modules.moduleone.view.main.ModuleOneMainViewSkin");
+}

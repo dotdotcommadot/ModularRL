@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" 
+		  xmlns:mxml="robotlegs.bender.mxml.*" 
+		  xmlns:main="com.dotdotcommadot.modularrl.modules.moduleone.view.main.*" 
+		  xmlns:config="com.dotdotcommadot.modularrl.modules.moduleone.config.*"
+		  width="100%"
+		  height="100%">
+	
+	<fx:Style source="assets/styles/moduleonestyle.css" />
+	
+	<fx:Declarations>
+		<mxml:ContextBuilderTag id="contextTag">
+			<config:ModuleOneBundle />
+			<config:ModuleOneConfig />
+		</mxml:ContextBuilderTag>
+	</fx:Declarations>
+	
+	<main:ModuleOneMainView id="mainView"
+							width="100%"
+							height="100%" />
+	
+</s:Module>
