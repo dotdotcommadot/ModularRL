@@ -2,10 +2,10 @@
 
 ModularRL is a demo for a modular application built with Flex 4.9 and Robotlegs 2.
 The application can be used as a point of reference if you'd like to learn more about:
-- MVCS architecture with Robotlegs 2
-- Robotlegs 2 modules (how to work with multiple configs and bundles etc)
-- Flex modules and optimizations
-- As3-Signals
+- Robotlegs 2 & MVCS architecture
+- Robotlegs 2 & modules
+- Robotlegs 2 & As3Signals
+- Flex modules
 
 ## Notes
 
