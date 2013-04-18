@@ -28,9 +28,10 @@ The application makes use of signals, because I wanted to test if there were no 
 ## Requirements
 
 ModularRL makes use of:
+- [Apache Flex 4.9](http://flex.apache.org)
 - [Robotlegs 2](http://www.robotlegs.org/)
 - [As3-Signals](https://github.com/robertpenner/as3-signals)
-- [Apache Flex 4.9](http://flex.apache.org)
+- [Signal Command Map](https://github.com/pixels4nickels/robotlegs-extensions-SignalCommandMap)
 
 ## Tips
 
