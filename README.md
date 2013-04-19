@@ -7,6 +7,10 @@ The application can be used as a point of reference if you'd like to learn more 
 - Robotlegs 2 & As3Signals
 - Flex modules
 
+## Runnin Application
+- [Release Version](http://www.dotdotcommadot.com/modularrl/release/)
+- [Debug Version](http://www.dotdotcommadot.com/modularrl/debug/)
+
 ## Notes
 
 Make sure to use with at least Robotlegs 2.0.0b4. 
