@@ -19,6 +19,7 @@
   <modules>
     <module application="src/ModularRL.mxml" destPath="com/dotdotcommadot/modularrl/modules/moduleone/ModuleOne.swf" optimize="true" sourcePath="src/com/dotdotcommadot/modularrl/modules/moduleone/ModuleOne.mxml"/>
     <module application="src/ModularRL.mxml" destPath="com/dotdotcommadot/modularrl/modules/moduletwo/ModuleTwo.swf" optimize="true" sourcePath="src/com/dotdotcommadot/modularrl/modules/moduletwo/ModuleTwo.mxml"/>
+    <module application="src/ModularRL.mxml" destPath="com/dotdotcommadot/modularrl/modules/logmodule/LogModule.swf" optimize="true" sourcePath="src/com/dotdotcommadot/modularrl/modules/logmodule/LogModule.mxml"/>
   </modules>
   <buildCSSFiles/>
   <flashCatalyst validateFlashCatalystCompatibility="false"/>

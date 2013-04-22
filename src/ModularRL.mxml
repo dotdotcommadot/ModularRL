@@ -5,21 +5,11 @@
 			   xmlns:mxml="robotlegs.bender.mxml.*" 
 			   xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
 			   xmlns:config="com.dotdotcommadot.modularrl.shell.config.*"
-			   xmlns:view="com.dotdotcommadot.modularrl.shell.view.*"
-			   initialize="onInitialize()" >
-	
-	<fx:Script>
-		<![CDATA[
-			import mx.core.FlexGlobals;
-			
-			private function onInitialize() : void
-			{
-				contextTag.contextView = FlexGlobals.topLevelApplication.systemManager;
-			}
-		]]>
-	</fx:Script>
+			   xmlns:view="com.dotdotcommadot.modularrl.shell.view.*" >
 	
 	<fx:Style source="assets/styles/globalstyles.css" />
+
+	<fx:Style source="assets/styles/shellstyle.css" />
 	
 	<fx:Declarations>
 		<mxml:ContextBuilderTag id="contextTag">
@@ -31,5 +21,5 @@
 	<view:Shell id="shell"
 				width="100%"
 				height="100%" />
-	
+
 </s:Application>

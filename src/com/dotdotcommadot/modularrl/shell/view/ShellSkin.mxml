@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009"
 		xmlns:s="library://ns.adobe.com/flex/spark"
-		xmlns:mx="library://ns.adobe.com/flex/mx">
+		xmlns:mx="library://ns.adobe.com/flex/mx" >
 	
 	<fx:Metadata>
 		[HostComponent("com.dotdotcommadot.modularrl.shell.view.Shell")]
@@ -30,12 +30,12 @@
 		<s:Button id="loadModuleOneButton" 
 				  label="Load Module One"
 				  width="100%"
-				  click="hostComponent.loadModule( Shell.MODULE_ONE_PATH )" />
+				  click="hostComponent.loadPageModule( Shell.MODULE_ONE_PATH )" />
 		
 		<s:Button id="loadModuleTwoButton" 
 				  label="Load Module Two"
 				  width="100%"
-				  click="hostComponent.loadModule( Shell.MODULE_TWO_PATH )" />
+				  click="hostComponent.loadPageModule( Shell.MODULE_TWO_PATH )" />
 		
 		<s:Button id="unloadModule" 
 				  label="Unload Module"
@@ -47,8 +47,15 @@
 		<s:Label text="Memory: {hostComponent.usedMemory}" />
 	</s:VGroup>
 	
-	<s:ModuleLoader id="moduleLoader"
-					width="100%"
-					height="100%"/>
-	
+	<s:VGroup width="100%"
+			  height="100%">
+		
+		<s:ModuleLoader id="logModuleLoader"
+						width="100%"
+						height="100" />
+		
+		<s:ModuleLoader id="pageModuleLoader"
+						width="100%"
+						height="100%" />
+	</s:VGroup>
 </s:Skin>

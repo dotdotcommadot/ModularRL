@@ -1,12 +1,6 @@
 /* CSS file */
 @namespace s "library://ns.adobe.com/flex/spark";
 @namespace mx "library://ns.adobe.com/flex/mx";
-@namespace view "com.dotdotcommadot.modularrl.shell.view.*";
-@namespace view1 "com.dotdotcommadot.modularrl.modules.moduleone.view.*";
-
-view|Shell {
-	skinClass: ClassReference("com.dotdotcommadot.modularrl.shell.view.ShellSkin");
-}
 
 .h1
 {

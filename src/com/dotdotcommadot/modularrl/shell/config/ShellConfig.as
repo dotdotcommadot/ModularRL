@@ -1,7 +1,8 @@
 package com.dotdotcommadot.modularrl.shell.config
 {
-	import com.dotdotcommadot.modularrl.shell.view.Shell;
-	import com.dotdotcommadot.modularrl.shell.view.ShellMediator;
+	import com.dotdotcommadot.modularrl.shared.controller.commands.AddLogCommand;
+	import com.dotdotcommadot.modularrl.shared.controller.signals.AddLogSignal;
+	import com.dotdotcommadot.modularrl.shared.model.LogModel;
 	
 	import org.swiftsuspenders.Injector;
 	
@@ -23,7 +24,18 @@ package com.dotdotcommadot.modularrl.shell.config
 		
 		public function configure():void
 		{
-			mediatorMap.map( Shell ).toMediator( ShellMediator );
+			//-----------------------------------
+			// Models
+			//-----------------------------------
+			
+			// Intermodular communication workaround!!
+			// This is actually in the wrong scope: 
+			// the shell application shouldn't have to know about these.
+			// But rework is in progress
+			
+			injector.map( LogModel ).asSingleton();
+			
+			commandMap.map( AddLogSignal ).toCommand( AddLogCommand );
 		}
 	}
 }

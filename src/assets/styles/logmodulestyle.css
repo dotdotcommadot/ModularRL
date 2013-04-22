@@ -1,0 +1,9 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace main "com.dotdotcommadot.modularrl.modules.logmodule.view.main.*";
+
+main|LogModuleMainView
+{
+	skinClass: ClassReference("com.dotdotcommadot.modularrl.modules.logmodule.view.main.LogModuleMainViewSkin");
+}

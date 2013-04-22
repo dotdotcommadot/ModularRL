@@ -18,8 +18,24 @@
 		</s:fill>
 	</s:Rect>
 	
-	<s:Label text="Module Two"
-			 styleName="whiteText"
-			 top="10"
-			 left="10"/>
+	<s:VGroup gap="10"
+			  width="100%"
+			  height="100%"
+			  right="10"
+			  left="10"
+			  top="10"
+			  bottom="10">
+		
+		<s:Label text="Module Two"
+				 styleName="whiteText"
+				 top="10"
+				 left="10"/>
+		
+		<s:TextInput id="logTextInput"
+					 width="200" />
+		
+		<s:Button id="addLogButton"
+				  label="Add Log" />
+		
+	</s:VGroup>
 </s:Skin>

@@ -5,8 +5,8 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.config
 	
 	import org.swiftsuspenders.Injector;
 	
-	import robotlegs.bender.extensions.eventCommandMap.api.IEventCommandMap;
 	import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
+	import robotlegs.bender.extensions.signalCommandMap.api.ISignalCommandMap;
 	import robotlegs.bender.framework.api.IConfig;
 	
 	/**
@@ -17,13 +17,23 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.config
 	{
 		[Inject] public var mediatorMap : IMediatorMap;
 		
-		[Inject] public var commandMap : IEventCommandMap;
+		[Inject] public var commandMap : ISignalCommandMap;
 		
 		[Inject] public var injector : Injector;
 		
 		public function configure():void
 		{
+			//-----------------------------------
+			// Views
+			//-----------------------------------
+			
 			mediatorMap.map( ModuleTwoMainView ).toMediator( ModuleTwoMainViewMediator );
+			
+			//-----------------------------------
+			// Commands
+			//-----------------------------------
+			
+			//commandMap.map( AddLogSignal ).toCommand( AddLogCommand );
 		}
 	}
 }

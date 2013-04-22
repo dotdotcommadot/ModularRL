@@ -1,32 +1,34 @@
-package com.dotdotcommadot.modularrl.shell.view
+package com.dotdotcommadot.modularrl.modules.logmodule.view.main
 {
-	import robotlegs.bender.bundles.mvcs.Mediator;
+	import spark.components.SkinnableContainer;
+	import spark.components.TextArea;
 	
 	/**
 	 * @author Hans Van den Keybus
-	 * @copyright (c) 2012 by dotdotcommadot
+	 * @copyright (c) 2013, dotdotcommadot
 	 */
-	public class ShellMediator extends Mediator
+	public class LogModuleMainView extends SkinnableContainer
 	{
-		//--------------------------------------------------------------------------
-		//
-		// Public Properties
-		// 
-		//--------------------------------------------------------------------------
-		
-		//-----------------------------------
-		// View
-		//-----------------------------------
-		
-		[Inject] public var view : Shell;
-		
 		//--------------------------------------------------------------------------
 		//
 		// Public Methods
 		// 
 		//--------------------------------------------------------------------------
 		
-		override public function initialize():void
+		//-----------------------------------
+		// SkinParts
+		//-----------------------------------
+		
+		[SkinPart( required="true" )]
+		public var logTextArea : TextArea;
+		
+		//--------------------------------------------------------------------------
+		//
+		// Constructor
+		// 
+		//--------------------------------------------------------------------------
+		
+		public function LogModuleMainView()
 		{
 		}
 	}

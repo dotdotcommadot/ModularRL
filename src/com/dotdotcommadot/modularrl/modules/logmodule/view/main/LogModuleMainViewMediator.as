@@ -1,8 +1,6 @@
-package com.dotdotcommadot.modularrl.modules.moduletwo.view.main
+package com.dotdotcommadot.modularrl.modules.logmodule.view.main
 {
-	import com.dotdotcommadot.modularrl.shared.controller.signals.AddLogSignal;
-	
-	import flash.events.MouseEvent;
+	import com.dotdotcommadot.modularrl.shared.model.LogModel;
 	
 	import robotlegs.bender.bundles.mvcs.Mediator;
 	
@@ -10,7 +8,7 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.view.main
 	 * @author Hans Van den Keybus
 	 * @copyright (c) 2013, dotdotcommadot
 	 */
-	public class ModuleTwoMainViewMediator extends Mediator
+	public class LogModuleMainViewMediator extends Mediator
 	{
 		//--------------------------------------------------------------------------
 		//
@@ -18,9 +16,9 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.view.main
 		// 
 		//--------------------------------------------------------------------------
 		
-		[Inject] public var view : ModuleTwoMainView;
-		
-		[Inject] public var addLogSignal : AddLogSignal;
+		[Inject] public var view : LogModuleMainView;
+
+		[Inject] public var logModel : LogModel;
 		
 		//--------------------------------------------------------------------------
 		//
@@ -28,8 +26,9 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.view.main
 		// 
 		//--------------------------------------------------------------------------
 		
-		public function ModuleTwoMainViewMediator()
+		public function LogModuleMainViewMediator()
 		{
+			trace( "jo") 
 		}
 		
 		//--------------------------------------------------------------------------
@@ -38,10 +37,10 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.view.main
 		// 
 		//--------------------------------------------------------------------------
 		
-		override public function initialize():void
+		override public function initialize() : void
 		{
-			// View
-			view.addLogButton.addEventListener( MouseEvent.CLICK, onClick_addLogButton );
+			// Model
+			logModel.logChanged.add( onLogChanged );
 		}
 		
 		//--------------------------------------------------------------------------
@@ -50,9 +49,9 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.view.main
 		// 
 		//--------------------------------------------------------------------------
 		
-		private function onClick_addLogButton( event : MouseEvent ) : void
+		private function onLogChanged() : void
 		{
-			addLogSignal.dispatch( view.logTextInput.text );
+			view.logTextArea.text = logModel.log;
 		}
 	}
 }

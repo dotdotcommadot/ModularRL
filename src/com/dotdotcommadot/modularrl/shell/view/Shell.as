@@ -5,6 +5,8 @@ package com.dotdotcommadot.modularrl.shell.view
 	import flash.system.ApplicationDomain;
 	import flash.system.System;
 	
+	import mx.events.FlexEvent;
+	
 	import spark.components.Button;
 	import spark.components.SkinnableContainer;
 	import spark.modules.ModuleLoader;
@@ -24,6 +26,8 @@ package com.dotdotcommadot.modularrl.shell.view
 		public static const MODULE_ONE_PATH : String = "com/dotdotcommadot/modularrl/modules/moduleone/ModuleOne.swf";
 
 		public static const MODULE_TWO_PATH : String = "com/dotdotcommadot/modularrl/modules/moduletwo/ModuleTwo.swf";
+
+		public static const LOG_MODULE_PATH : String = "com/dotdotcommadot/modularrl/modules/logmodule/LogModule.swf";
 		
 		//--------------------------------------------------------------------------
 		//
@@ -42,7 +46,10 @@ package com.dotdotcommadot.modularrl.shell.view
 		public var loadModuleTwoButton : Button;
 
 		[SkinPart(required="true")]
-		public var moduleLoader : ModuleLoader;
+		public var logModuleLoader : ModuleLoader;
+
+		[SkinPart(required="true")]
+		public var pageModuleLoader : ModuleLoader;
 		
 		//-----------------------------------
 		// General
@@ -58,7 +65,7 @@ package com.dotdotcommadot.modularrl.shell.view
 		
 		public function Shell()
 		{
-			addEventListener( Event.ENTER_FRAME, onEnterFrame );
+			addEventListener( FlexEvent.CREATION_COMPLETE, onCreationComplete );
 		}
 		
 		//--------------------------------------------------------------------------
@@ -67,16 +74,16 @@ package com.dotdotcommadot.modularrl.shell.view
 		// 
 		//--------------------------------------------------------------------------
 		
-		public function loadModule( path : String ) : void
+		public function loadPageModule( path : String ) : void
 		{
-			moduleLoader.applicationDomain = new ApplicationDomain( ApplicationDomain.currentDomain );
-			moduleLoader.loadModule(path);
+			pageModuleLoader.applicationDomain = new ApplicationDomain( ApplicationDomain.currentDomain );
+			pageModuleLoader.loadModule(path);
 		}
 		
 		public function unloadModule() : void
 		{
-			moduleLoader.applicationDomain = null;
-			moduleLoader.unloadModule();
+			pageModuleLoader.applicationDomain = null;
+			pageModuleLoader.unloadModule();
 			
 			forceGC();
 		}
@@ -86,6 +93,17 @@ package com.dotdotcommadot.modularrl.shell.view
 		// Private Methods
 		// 
 		//--------------------------------------------------------------------------
+		
+		private function onCreationComplete( event : Event ) : void
+		{
+			removeEventListener( FlexEvent.CREATION_COMPLETE, onCreationComplete );
+			
+			addEventListener( Event.ENTER_FRAME, onEnterFrame );
+			
+			// Load Log Module
+			logModuleLoader.applicationDomain = new ApplicationDomain( ApplicationDomain.currentDomain );
+			logModuleLoader.loadModule( Shell.LOG_MODULE_PATH );
+		}
 		
 		private function onEnterFrame( event : Event ) : void
 		{
