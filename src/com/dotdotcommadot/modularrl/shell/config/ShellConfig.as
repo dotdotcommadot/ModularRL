@@ -28,10 +28,12 @@ package com.dotdotcommadot.modularrl.shell.config
 			// Models
 			//-----------------------------------
 			
-			// Intermodular communication workaround!!
-			// This is actually in the wrong scope: 
+			// Intermodular communication workaround
+			// On one side, you could say that this is actually in the wrong scope: 
 			// the shell application shouldn't have to know about these.
-			// But rework is in progress
+			// on the other side: moduleTwo shouldn't have to know about the addLogCommand either I think,
+			// so where else do you map the signal to the command, instead of in the shell?
+			// Rework is in progress
 			
 			injector.map( LogModel ).asSingleton();
 			

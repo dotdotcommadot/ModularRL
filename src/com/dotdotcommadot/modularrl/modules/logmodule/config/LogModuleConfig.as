@@ -27,22 +27,10 @@ package com.dotdotcommadot.modularrl.modules.logmodule.config
 		public function configure() : void
 		{
 			//-----------------------------------
-			// Models
-			//-----------------------------------
-			
-			//injector.map( LogModel ).asSingleton();
-			
-			//-----------------------------------
 			// Views
 			//-----------------------------------
 			
 			mediatorMap.map( LogModuleMainView ).toMediator( LogModuleMainViewMediator );
-			
-			//-----------------------------------
-			// Commands
-			//-----------------------------------
-			
-			//commandMap.map( AddLogSignal ).toCommand( AddLogCommand );
 		}
 	}
 }

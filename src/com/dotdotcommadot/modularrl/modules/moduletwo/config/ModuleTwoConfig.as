@@ -28,12 +28,6 @@ package com.dotdotcommadot.modularrl.modules.moduletwo.config
 			//-----------------------------------
 			
 			mediatorMap.map( ModuleTwoMainView ).toMediator( ModuleTwoMainViewMediator );
-			
-			//-----------------------------------
-			// Commands
-			//-----------------------------------
-			
-			//commandMap.map( AddLogSignal ).toCommand( AddLogCommand );
 		}
 	}
 }

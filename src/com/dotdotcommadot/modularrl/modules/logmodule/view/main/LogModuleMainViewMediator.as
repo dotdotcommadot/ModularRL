@@ -28,7 +28,6 @@ package com.dotdotcommadot.modularrl.modules.logmodule.view.main
 		
 		public function LogModuleMainViewMediator()
 		{
-			trace( "jo") 
 		}
 		
 		//--------------------------------------------------------------------------
