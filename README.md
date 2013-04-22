@@ -2,10 +2,14 @@
 
 ModularRL is a demo for a modular application built with Flex 4.9 and Robotlegs 2.
 The application can be used as a point of reference if you'd like to learn more about:
-- MVCS architecture with Robotlegs 2
-- Robotlegs 2 modules (how to work with multiple configs and bundles etc)
-- Flex modules and optimizations
-- As3-Signals
+- Robotlegs 2 & MVCS architecture
+- Robotlegs 2 & modules
+- Robotlegs 2 & As3Signals
+- Flex modules
+
+## Runnin Applications
+- [Release Version](http://www.dotdotcommadot.com/modularrl/release/)
+- [Debug Version](http://www.dotdotcommadot.com/modularrl/debug/)
 
 ## Notes
 
@@ -28,9 +32,10 @@ The application makes use of signals, because I wanted to test if there were no 
 ## Requirements
 
 ModularRL makes use of:
+- [Apache Flex 4.9](http://flex.apache.org)
 - [Robotlegs 2](http://www.robotlegs.org/)
 - [As3-Signals](https://github.com/robertpenner/as3-signals)
-- [Apache Flex 4.9](http://flex.apache.org)
+- [Signal Command Map](https://github.com/pixels4nickels/robotlegs-extensions-SignalCommandMap)
 
 ## Tips
 
